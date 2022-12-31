@@ -1,0 +1,13 @@
+header {
+  padding: 1.875rem 0;
+  box-shadow: 0px 2px 4px hsla(0deg, 0%, 0%, 0.056);
+}
+@media (min-width: 43.75em) {
+  header {
+    padding: 1.4375rem 0;
+  }
+}
+header nav a {
+  text-decoration: none;
+  color: inherit;
+}/*# sourceMappingURL=Navbar.css.map */

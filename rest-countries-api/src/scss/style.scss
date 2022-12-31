@@ -1,0 +1,11 @@
+@forward './global';
+@forward './layout';
+@use './util' as u;
+
+.darkmode-icon {
+    font-size: u.toRem(16);
+
+    @include u.breakpoint('medium'){
+        font-size: u.toRem(20);
+    }
+}

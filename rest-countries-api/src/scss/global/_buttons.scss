@@ -1,0 +1,16 @@
+@use '../util' as u;
+
+.btn{
+    cursor: pointer;
+    transition: color .3s ease-in-out;
+
+    &--transparent {
+        background-color: transparent;
+        border: none;
+        text-transform: capitalize;
+
+        &:hover, &:focus {
+            color: blue;
+        }
+    }
+}

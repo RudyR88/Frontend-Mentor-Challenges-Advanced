@@ -1,0 +1,99 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--primary-font);
+  font-weight: 300;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  color: var(--light-txt-clr);
+  background-color: var(--light-bg-clr);
+}
+
+.btn {
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+.btn--transparent {
+  background-color: transparent;
+  border: none;
+  text-transform: capitalize;
+}
+.btn--transparent:hover, .btn--transparent:focus {
+  color: blue;
+}
+
+h1, h2, h3, h4, span, p, a {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 0;
+  font-weight: 800;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+@media (min-width: 43.75em) {
+  h1 {
+    font-size: 1.5rem;
+    line-height: 2.04625rem;
+  }
+}
+
+.btn-txt {
+  font-weight: 600;
+  font-size: 0.75rem;
+  line-height: 1.023125rem;
+}
+@media (min-width: 43.75em) {
+  .btn-txt {
+    font-size: 1rem;
+    line-height: 1.36375rem;
+  }
+}
+
+:root {
+  --primary-font: "Nunito Sans", sans-serif;
+  --light-txt-clr: hsl(200, 15%, 8%);
+  --light-input-clr: hsl(0, 0%, 52%);
+  --light-bg-clr: hsl(0, 0%, 98%);
+  --dark-txt-clr: hsl(0, 0%, 100%);
+  --dark-elements-clr: hsl(209, 23%, 22%);
+  --dark-bg-clr: hsl(207, 26%, 17%);
+}
+
+.container {
+  width: 90%;
+  max-width: 23.4375em;
+  margin: 0 auto;
+}
+@media (min-width: 43.75em) {
+  .container {
+    max-width: 90em;
+  }
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.darkmode-icon {
+  font-size: 1rem;
+}
+@media (min-width: 43.75em) {
+  .darkmode-icon {
+    font-size: 1.25rem;
+  }
+}/*# sourceMappingURL=style.css.map */

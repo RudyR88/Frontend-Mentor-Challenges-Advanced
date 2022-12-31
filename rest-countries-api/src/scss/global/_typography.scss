@@ -1,0 +1,28 @@
+@use '../util' as u;
+
+h1, h2, h3, h4, span, p, a {
+    margin-top: 0;
+}
+
+h1 {
+    margin-bottom: 0;
+    font-weight: 800;
+    font-size: u.toRem(14);
+    line-height: u.toRem(20);
+
+    @include u.breakpoint('medium'){
+        font-size: u.toRem(24);
+        line-height: u.toRem(32.74);
+    }
+}
+
+.btn-txt {
+    font-weight: 600;
+    font-size: u.toRem(12);
+    line-height: u.toRem(16.37);
+
+    @include u.breakpoint('medium'){
+        font-size: u.toRem(16);
+        line-height: u.toRem(21.82);
+    }
+}
