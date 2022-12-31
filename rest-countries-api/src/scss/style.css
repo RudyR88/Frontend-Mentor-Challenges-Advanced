@@ -16,21 +16,16 @@ body {
   font-weight: 300;
   font-size: 0.875rem;
   line-height: 1rem;
-  color: var(--light-txt-clr);
-  background-color: var(--light-bg-clr);
 }
 
 .btn {
   cursor: pointer;
-  transition: color 0.3s ease-in-out;
 }
 .btn--transparent {
+  color: inherit;
   background-color: transparent;
   border: none;
   text-transform: capitalize;
-}
-.btn--transparent:hover, .btn--transparent:focus {
-  color: blue;
 }
 
 h1, h2, h3, h4, span, p, a {
@@ -96,4 +91,14 @@ h1 {
   .darkmode-icon {
     font-size: 1.25rem;
   }
+}
+
+.light {
+  background-color: var(--light-bg-clr);
+  color: var(--light-txt-clr);
+}
+
+.dark {
+  background-color: var(--dark-bg-clr);
+  color: var(--dark-txt-clr);
 }/*# sourceMappingURL=style.css.map */

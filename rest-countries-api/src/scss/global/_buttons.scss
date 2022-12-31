@@ -2,15 +2,11 @@
 
 .btn{
     cursor: pointer;
-    transition: color .3s ease-in-out;
 
     &--transparent {
+        color: inherit;
         background-color: transparent;
         border: none;
         text-transform: capitalize;
-
-        &:hover, &:focus {
-            color: blue;
-        }
     }
 }

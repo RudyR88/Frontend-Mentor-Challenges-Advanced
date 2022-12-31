@@ -9,3 +9,13 @@
         font-size: u.toRem(20);
     }
 }
+
+.light {
+    background-color: var(--light-bg-clr);
+    color: var(--light-txt-clr);
+}
+
+.dark {
+    background-color: var(--dark-bg-clr);
+    color: var(--dark-txt-clr);
+}
