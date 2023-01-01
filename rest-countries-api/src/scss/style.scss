@@ -3,19 +3,29 @@
 @use './util' as u;
 
 .darkmode-icon {
-    font-size: u.toRem(16);
+    font-size: u.toRem(12);
+    margin-right: u.toRem(8);
 
     @include u.breakpoint('medium'){
-        font-size: u.toRem(20);
+        font-size: u.toRem(15);
+        margin-right: u.toRem(10.5);
     }
 }
 
 .light {
-    background-color: var(--light-bg-clr);
+    background-color: var(--dark-txt-clr);
     color: var(--light-txt-clr);
 }
 
 .dark {
-    background-color: var(--dark-bg-clr);
+    background-color: var(--dark-el-clr);
     color: var(--dark-txt-clr);
+}
+
+.light-section {
+    background-color: var(--light-bg-clr);
+}
+
+.dark-section {
+    background-color: var(--dark-bg-clr);
 }

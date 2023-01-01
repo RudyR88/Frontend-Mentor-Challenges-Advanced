@@ -10,7 +10,7 @@ export default function Navbar() {
             <nav className='navbar container flex-between' aria-label='home navigation and theme toggle' role='navigation'>
                 <h1><Link to='/'>Where in the world?</Link></h1>
                 <button className='btn btn--transparent btn-txt' onClick={toggleTheme}>
-                    <i className={`fa-${theme === 'dark' ? 'solid' : 'regular'} fa-moon icon`}></i> dark mode
+                    <i className={`fa-${theme === 'dark' ? 'solid' : 'regular'} fa-moon darkmode-icon`}></i>dark mode
                 </button>
             </nav>
         </header>

@@ -2,7 +2,6 @@
 
 .container {
     width: 90%;
-    max-width: u.toEm(375);
     margin: 0 auto;
 
     @include u.breakpoint('medium'){

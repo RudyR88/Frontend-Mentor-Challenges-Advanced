@@ -2,11 +2,13 @@
 
 .btn{
     cursor: pointer;
+    font-family: var(--primary-txt);
 
     &--transparent {
         color: inherit;
         background-color: transparent;
         border: none;
         text-transform: capitalize;
+        padding: 0;
     }
 }

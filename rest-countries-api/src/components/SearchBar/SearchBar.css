@@ -1,3 +1,28 @@
 .searchbar {
-  margin-top: 1.5rem;
+  width: 21.4375rem;
+  margin: 1.5rem auto 2.5rem;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+}
+@media (min-width: 43.75em) {
+  .searchbar {
+    width: 30rem;
+    margin-left: 0;
+    margin-bottom: 3rem;
+  }
+}
+.searchbar .fa-magnifying-glass {
+  margin-right: 1.625rem;
+}
+.searchbar input[type=text] {
+  font-family: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  width: 85%;
+}
+@media (min-width: 43.75em) {
+  .searchbar input[type=text] {
+    width: 90%;
+  }
 }/*# sourceMappingURL=SearchBar.css.map */

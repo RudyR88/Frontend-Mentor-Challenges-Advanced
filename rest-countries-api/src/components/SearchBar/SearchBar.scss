@@ -1,5 +1,30 @@
 @use '../../scss/util' as u;
 
 .searchbar {
-    margin-top: u.toRem(24);
+    width: u.toRem(343);
+    margin: u.toRem(24) auto u.toRem(40);
+    padding: u.toRem(16) u.toRem(32);
+    border-radius: 5px;
+
+    @include u.breakpoint('medium'){
+        width: u.toRem(480);
+        margin-left: 0;
+        margin-bottom: u.toRem(48);
+    }
+
+    .fa-magnifying-glass {
+        margin-right: u.toRem(26);
+    }
+
+    input[type=text]{
+        font-family: inherit;
+        color: inherit;
+        background-color: transparent;
+        border: none;
+        width: 85%;
+
+        @include u.breakpoint('medium'){
+            width: 90%;
+        }
+    }
 }

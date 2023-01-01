@@ -20,12 +20,14 @@ body {
 
 .btn {
   cursor: pointer;
+  font-family: var(--primary-txt);
 }
 .btn--transparent {
   color: inherit;
   background-color: transparent;
   border: none;
   text-transform: capitalize;
+  padding: 0;
 }
 
 h1, h2, h3, h4, span, p, a {
@@ -63,13 +65,12 @@ h1 {
   --light-input-clr: hsl(0, 0%, 52%);
   --light-bg-clr: hsl(0, 0%, 98%);
   --dark-txt-clr: hsl(0, 0%, 100%);
-  --dark-elements-clr: hsl(209, 23%, 22%);
+  --dark-el-clr: hsl(209, 23%, 22%);
   --dark-bg-clr: hsl(207, 26%, 17%);
 }
 
 .container {
   width: 90%;
-  max-width: 23.4375em;
   margin: 0 auto;
 }
 @media (min-width: 43.75em) {
@@ -85,20 +86,30 @@ h1 {
 }
 
 .darkmode-icon {
-  font-size: 1rem;
+  font-size: 0.75rem;
+  margin-right: 0.5rem;
 }
 @media (min-width: 43.75em) {
   .darkmode-icon {
-    font-size: 1.25rem;
+    font-size: 0.9375rem;
+    margin-right: 0.65625rem;
   }
 }
 
 .light {
-  background-color: var(--light-bg-clr);
+  background-color: var(--dark-txt-clr);
   color: var(--light-txt-clr);
 }
 
 .dark {
-  background-color: var(--dark-bg-clr);
+  background-color: var(--dark-el-clr);
   color: var(--dark-txt-clr);
+}
+
+.light-section {
+  background-color: var(--light-bg-clr);
+}
+
+.dark-section {
+  background-color: var(--dark-bg-clr);
 }/*# sourceMappingURL=style.css.map */
