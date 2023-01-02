@@ -59,6 +59,17 @@ h1 {
   }
 }
 
+.controls-txt {
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+}
+@media (min-width: 43.75em) {
+  .controls-txt {
+    font-size: 0.875rem;
+  }
+}
+
 :root {
   --primary-font: "Nunito Sans", sans-serif;
   --light-txt-clr: hsl(200, 15%, 8%);

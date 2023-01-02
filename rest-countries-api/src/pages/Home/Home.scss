@@ -1,0 +1,19 @@
+@use '../../scss/util' as u;
+
+.home {
+
+    .controls {
+        margin: u.toRem(24) auto u.toRem(32);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        @include u.breakpoint('large'){
+            margin-top: u.toRem(48) auto;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+}

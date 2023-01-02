@@ -26,3 +26,13 @@ h1 {
         line-height: u.toRem(21.82);
     }
 }
+
+.controls-txt{
+    font-weight: 400;
+    font-size: u.toRem(12);
+    line-height: u.toRem(20);
+
+    @include u.breakpoint('medium'){
+        font-size: u.toRem(14);
+    }
+}

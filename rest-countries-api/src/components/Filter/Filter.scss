@@ -1,0 +1,12 @@
+@use '../../scss/util' as u;
+
+.filter {
+    font-family: inherit;
+    width: u.toRem(200);
+    position: relative;
+    padding: u.toRem(14) u.toRem(24);
+    box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
+    border: none;
+    border-radius: 5px;
+
+}

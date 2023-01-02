@@ -1,14 +1,20 @@
 .searchbar {
-  width: 21.4375rem;
-  margin: 1.5rem auto 2.5rem;
+  width: 100%;
+  margin-bottom: 2.5rem;
   padding: 1rem 2rem;
   border-radius: 5px;
+  box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
 }
 @media (min-width: 43.75em) {
   .searchbar {
     width: 30rem;
     margin-left: 0;
     margin-bottom: 3rem;
+  }
+}
+@media (min-width: 56.25em) {
+  .searchbar {
+    margin-bottom: 0;
   }
 }
 .searchbar .fa-magnifying-glass {
@@ -19,7 +25,7 @@
   color: inherit;
   background-color: transparent;
   border: none;
-  width: 85%;
+  width: 80%;
 }
 @media (min-width: 43.75em) {
   .searchbar input[type=text] {
