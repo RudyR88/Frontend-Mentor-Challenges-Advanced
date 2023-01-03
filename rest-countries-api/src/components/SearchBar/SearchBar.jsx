@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './SearchBar.css';
 
 export default function SearchBar({theme}) {
@@ -11,4 +12,8 @@ export default function SearchBar({theme}) {
             <input type='text' placeholder='Search for country...'/>
         </div>
     )
+}
+
+SearchBar.propTypes = {
+    theme: PropTypes.oneOf(['light', 'dark'])
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Filter.css';
 
 export default function Filter({theme}) {
@@ -14,4 +15,8 @@ export default function Filter({theme}) {
             </select>
         </div>
     )
+}
+
+Filter.propTypes = {
+    theme: PropTypes.oneOf(['light', 'dark'])
 }
