@@ -1,0 +1,42 @@
+@use '../../scss/util' as u;
+
+.country {
+    display: block;
+    text-decoration: none;
+    width: u.toRem(267);
+    border-radius: 5px;
+
+    @include u.breakpoint('medium'){
+        width: 100%;
+    }
+
+    .flag {
+        align-self: stretch;
+        display: block;
+        width: 100%;
+        height: u.toRem(160);
+        object-fit: cover;
+        border-radius: 5px 5px 0 0;
+    }
+
+    &__info{
+        padding: u.toRem(24) u.toRem(24) u.toRem(46);
+        ul {
+            padding: 0;
+            list-style: none;
+
+            li {
+                margin-bottom: u.toRem(8);
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            span {
+                font-weight: 600;
+                text-transform: capitalize;
+            }
+        }
+    }
+}

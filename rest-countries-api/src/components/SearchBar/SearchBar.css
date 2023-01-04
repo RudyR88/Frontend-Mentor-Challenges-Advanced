@@ -12,7 +12,7 @@
     margin-bottom: 3rem;
   }
 }
-@media (min-width: 56.25em) {
+@media (min-width: 68.75em) {
   .searchbar {
     margin-bottom: 0;
   }

@@ -30,14 +30,13 @@ body {
   padding: 0;
 }
 
-h1, h2, h3, h4, span, p, a {
+h1, h2, h3, h4, span, ul, p, a {
   margin-top: 0;
 }
 
 h1 {
   margin-bottom: 0;
-  font-weight: 800;
-  font-size: 0.875rem;
+  font-size: inherit;
   line-height: 1.25rem;
 }
 @media (min-width: 43.75em) {
@@ -45,6 +44,12 @@ h1 {
     font-size: 1.5rem;
     line-height: 2.04625rem;
   }
+}
+
+h3 {
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
 }
 
 .btn-txt {
@@ -68,6 +73,10 @@ h1 {
   .controls-txt {
     font-size: 0.875rem;
   }
+}
+
+.extra-bold {
+  font-weight: 800;
 }
 
 :root {
