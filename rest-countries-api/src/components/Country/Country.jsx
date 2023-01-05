@@ -7,7 +7,7 @@ export default function Country({theme, place}) {
         <a href='#' className={`country ${theme}`}>
             <img className='flag' src={flags.png} alt='' aria-hidden='true'/>
             <div className='country__info'>
-                <h3 className='extra-bold'>{name.common}</h3>
+                <h3 className='extra-bold'>{name.official !== undefined ? name.official : name}</h3>
                 <ul>
                     <li><span>population:</span> {population.toLocaleString("en-US")}</li>
                     <li><span>region:</span> {region}</li>

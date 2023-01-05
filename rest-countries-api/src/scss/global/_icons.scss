@@ -1,0 +1,11 @@
+@use '../util' as u;
+
+.darkmode-icon {
+    font-size: u.toRem(12);
+    margin-right: u.toRem(8);
+
+    @include u.breakpoint('medium'){
+        font-size: u.toRem(15);
+        margin-right: u.toRem(10.5);
+    }
+}

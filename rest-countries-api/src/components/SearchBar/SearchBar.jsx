@@ -2,14 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './SearchBar.css';
 
-export default function SearchBar({theme}) {
+export default function SearchBar({theme, searchLocation}) {
     const magnifClr = {
         color: theme === 'light' ? 'hsl(0, 0%, 77%)' : 'inherit',
     }
     return (
         <div className={`searchbar ${theme}`}>
             <i className='fa-solid fa-magnifying-glass' style={magnifClr}></i>
-            <input type='text' placeholder='Search for country...'/>
+            <input type='text' placeholder='Search for country...' onChange={ e => searchLocation(e.target.value)}/>
         </div>
     )
 }

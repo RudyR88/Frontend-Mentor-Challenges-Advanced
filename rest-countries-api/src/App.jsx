@@ -8,7 +8,7 @@ import './scss/style.css';
 export default function App() {
   const {theme} = useContext(ThemeContext);
   return (
-    <div className={`${theme}-section`}>
+    <div className={`app ${theme}-section`}>
       <Router>
         <Navbar />
         <Routes>

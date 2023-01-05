@@ -30,6 +30,35 @@ body {
   padding: 0;
 }
 
+.darkmode-icon {
+  font-size: 0.75rem;
+  margin-right: 0.5rem;
+}
+@media (min-width: 43.75em) {
+  .darkmode-icon {
+    font-size: 0.9375rem;
+    margin-right: 0.65625rem;
+  }
+}
+
+.light {
+  background-color: var(--dark-txt-clr);
+  color: var(--light-txt-clr);
+}
+
+.dark {
+  background-color: var(--dark-el-clr);
+  color: var(--dark-txt-clr);
+}
+
+.light-section {
+  background-color: var(--light-bg-clr);
+}
+
+.dark-section {
+  background-color: var(--dark-bg-clr);
+}
+
 h1, h2, h3, h4, span, ul, p, a {
   margin-top: 0;
 }
@@ -105,31 +134,6 @@ h3 {
   justify-content: space-between;
 }
 
-.darkmode-icon {
-  font-size: 0.75rem;
-  margin-right: 0.5rem;
-}
-@media (min-width: 43.75em) {
-  .darkmode-icon {
-    font-size: 0.9375rem;
-    margin-right: 0.65625rem;
-  }
-}
-
-.light {
-  background-color: var(--dark-txt-clr);
-  color: var(--light-txt-clr);
-}
-
-.dark {
-  background-color: var(--dark-el-clr);
-  color: var(--dark-txt-clr);
-}
-
-.light-section {
-  background-color: var(--light-bg-clr);
-}
-
-.dark-section {
-  background-color: var(--dark-bg-clr);
+.app {
+  min-height: 100vh;
 }/*# sourceMappingURL=style.css.map */

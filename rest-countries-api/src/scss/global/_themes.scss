@@ -1,0 +1,17 @@
+.light {
+    background-color: var(--dark-txt-clr);
+    color: var(--light-txt-clr);
+}
+
+.dark {
+    background-color: var(--dark-el-clr);
+    color: var(--dark-txt-clr);
+}
+
+.light-section {
+    background-color: var(--light-bg-clr);
+}
+
+.dark-section {
+    background-color: var(--dark-bg-clr);
+}

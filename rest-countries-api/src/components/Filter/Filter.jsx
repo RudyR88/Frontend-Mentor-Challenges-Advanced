@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Filter.css';
 
-export default function Filter({theme}) {
+export default function Filter({theme, selectRegion}) {
     return (
         <div className='filter-container'>
-            <select className={`filter ${theme}`} aria-label='filter by region' defaultValue=''>
+            <select className={`filter ${theme}`} aria-label='filter by region' defaultValue='' onChange={e => selectRegion(e.target.value)}>
                     <option value='' disabled hidden>Filter by Region</option>
                     <option value='africa'>Africa</option>
                     <option value='america'>America</option>
