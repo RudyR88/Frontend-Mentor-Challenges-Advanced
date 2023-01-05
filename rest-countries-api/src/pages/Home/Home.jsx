@@ -8,46 +8,50 @@ import './Home.css';
 export default function Home({theme}) {
     const baseUrl = 'https://restcountries.com/v3.1'
     const [countries, setCountries] = useState([]);
-    const [region, setRegion] = useState('');
     const [search, setSearch] = useState('');
     let apiUrl = baseUrl+'/all';
 
+    const getCountries = url => {
+        fetch(url)
+        .then(res => res.json())
+        .then(data => setCountries(data))
+    }
+
     const selectRegion = selected => {
-        setRegion(selected)
-    };
+        getCountries(`${baseUrl}/region/${selected}`)
+    }
 
     const searchLocation = location => {
-        setSearch(location)
+        if(location !== ''){
+            getCountries(`https://restcountries.com/v2/name/${location}`)
+            document.querySelector('.filter').selectedIndex = 0;
+        }
+        setSearch(location);
     }
 
     useEffect(()=>{
 
-        if(region !== ''){
-            apiUrl = `${baseUrl}/region/${region}`
-        }
-        
-        if(search !== ''){
-            apiUrl = `https://restcountries.com/v2/name/${search}`
+        if(search === ''){
+            getCountries(apiUrl)
         }
 
-        console.log(apiUrl)
+    },[search])
 
-        fetch(apiUrl)
-        .then(res => res.json())
-        .then(data => setCountries(data))
-        .catch((error)=>console.log(error))
-    },[region, search])
+    const isCountry = countries.length >= 1;
+    let countryComps = null;
 
-    const countryComps = countries.map(place => <Country key={nanoid()} theme={theme} place={place}/>)
+    if(isCountry){
+        countryComps = countries.map(place => <Country key={nanoid()} theme={theme} place={place}/>)
+    }
 
     return (
         <main className='container home'>
             <div className='controls controls-txt'>
                 <SearchBar theme={theme} searchLocation={searchLocation}/>
-                <Filter theme={theme} selectRegion={selectRegion}/>
+                <Filter theme={theme} selectRegion={selectRegion} search={search}/>
             </div>
             <div className='countries-container'>
-                {countryComps}
+                { isCountry ? countryComps : <h2 className={theme}>No countries matching "{search}"</h2>}
             </div>
         </main>
     )

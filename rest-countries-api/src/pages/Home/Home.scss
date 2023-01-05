@@ -35,6 +35,23 @@
         @include u.breakpoint('large'){
             grid-template-columns: repeat(4, 1fr);
         }
+
+        h2 {
+            position: absolute;
+            font-size: u.toRem(20);
+            margin-bottom: 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: 600;
+            font-style: italic;
+            background-color: transparent;
+            text-align: center;
+
+            @include u.breakpoint('medium'){
+                font-size: u.toRem(25);
+            }
+        }
     }
 
 }

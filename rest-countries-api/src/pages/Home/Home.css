@@ -33,4 +33,21 @@
   .home .countries-container {
     grid-template-columns: repeat(4, 1fr);
   }
+}
+.home .countries-container h2 {
+  position: absolute;
+  font-size: 1.25rem;
+  margin-bottom: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 600;
+  font-style: italic;
+  background-color: transparent;
+  text-align: center;
+}
+@media (min-width: 43.75em) {
+  .home .countries-container h2 {
+    font-size: 1.5625rem;
+  }
 }/*# sourceMappingURL=Home.css.map */
