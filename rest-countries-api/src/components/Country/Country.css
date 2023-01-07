@@ -20,18 +20,4 @@
 }
 .country__info {
   padding: 1.5rem 1.5rem 2.875rem;
-}
-.country__info ul {
-  padding: 0;
-  list-style: none;
-}
-.country__info ul li {
-  margin-bottom: 0.5rem;
-}
-.country__info ul li:last-child {
-  margin-bottom: 0;
-}
-.country__info ul span {
-  font-weight: 600;
-  text-transform: capitalize;
 }/*# sourceMappingURL=Country.css.map */

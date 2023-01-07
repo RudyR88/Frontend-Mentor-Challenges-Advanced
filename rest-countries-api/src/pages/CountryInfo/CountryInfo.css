@@ -1,34 +1,98 @@
-.country__info {
+.countryInfo {
+  padding-bottom: 4em;
+}
+.countryInfo__info {
   margin-top: 4rem;
   display: flex;
   flex-direction: column;
   gap: 2.75rem;
 }
-@media (min-width: 43.75em) {
-  .country__info {
+@media (min-width: 68.75em) {
+  .countryInfo__info {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     gap: 0;
   }
 }
-.country__info__flag {
+.countryInfo__info__flag {
   display: block;
   width: 100%;
+  max-width: 25rem;
+  margin: 0 auto;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 5px;
 }
 @media (min-width: 43.75em) {
-  .country__info__flag {
+  .countryInfo__info__flag {
+    max-width: 35rem;
     width: 45%;
   }
 }
-@media (min-width: 43.75em) {
-  .country__info__about {
+@media (min-width: 68.75em) {
+  .countryInfo__info__about {
     width: 45%;
   }
 }
-.country__info__about__specs {
+.countryInfo__info__about__specs {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  margin-bottom: 2rem;
+}
+@media (min-width: 43.75em) {
+  .countryInfo__info__about__specs {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+    margin-bottom: 4.25rem;
+  }
+}
+.countryInfo__info__about__specs ul {
+  font-size: 1rem;
+  line-height: 2rem;
+  font-weight: 300;
+}
+@media (min-width: 43.75em) {
+  .countryInfo__info__about__specs ul {
+    width: 45%;
+  }
+}
+.countryInfo__info__about__specs ul li {
+  opacity: 0.8;
+}
+.countryInfo__info__about__specs ul .title {
+  font-weight: 400;
+  font-size: 1rem;
+}
+.countryInfo__info__about .borders {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 43.75em) {
+  .countryInfo__info__about .borders {
+    flex-direction: row;
+  }
+}
+.countryInfo__info__about .borders h4 {
+  width: 9.375rem;
+  margin-bottom: 1rem;
+}
+@media (min-width: 68.75em) {
+  .countryInfo__info__about .borders h4 {
+    margin-bottom: 0;
+  }
+}
+.countryInfo__info__about .borders-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  place-items: center;
+  gap: 10px;
+}
+@media (min-width: 68.75em) {
+  .countryInfo__info__about .borders-container {
+    width: auto;
+  }
 }/*# sourceMappingURL=CountryInfo.css.map */

@@ -21,22 +21,5 @@
 
     &__info{
         padding: u.toRem(24) u.toRem(24) u.toRem(46);
-        ul {
-            padding: 0;
-            list-style: none;
-
-            li {
-                margin-bottom: u.toRem(8);
-
-                &:last-child {
-                    margin-bottom: 0;
-                }
-            }
-
-            span {
-                font-weight: 600;
-                text-transform: capitalize;
-            }
-        }
     }
 }

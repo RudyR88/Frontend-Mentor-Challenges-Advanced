@@ -15,10 +15,30 @@ h1 {
     }
 }
 
+h2 {
+    font-weight: 800;
+    font-size: u.toRem(22);
+    line-height: u.toRem(30);
+    margin-bottom: u.toRem(16);
+
+    @include u.breakpoint('medium'){
+        font-size: u.toRem(32);
+        line-height: u.toRem(43);
+        margin-bottom: u.toRem(23);
+    }
+}
+
 h3 {
     margin-bottom: u.toRem(16);
     font-size: u.toRem(18);
     line-height: u.toRem(26);
+}
+
+h4 {
+    font-size: u.toRem(16);
+    font-weight: 600;
+    line-height: u.toRem(24);
+    text-transform: capitalize;
 }
 
 .btn-txt {

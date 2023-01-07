@@ -1,0 +1,18 @@
+.border-link {
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+  padding: 0.3125rem 1.6875rem;
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.104931);
+  border-radius: 2px;
+  font-family: inherit;
+  font-weight: 300;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+@media (min-width: 43.75em) {
+  .border-link {
+    font-size: 0.875rem;
+    line-height: 1.1875rem;
+  }
+}/*# sourceMappingURL=CountryLinks.css.map */

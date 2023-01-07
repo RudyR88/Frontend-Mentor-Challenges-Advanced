@@ -65,6 +65,21 @@ body {
   }
 }
 
+.cleaned-about-list {
+  padding: 0;
+  list-style: none;
+}
+.cleaned-about-list li {
+  margin-bottom: 0.5rem;
+}
+.cleaned-about-list li:last-child {
+  margin-bottom: 0;
+}
+.cleaned-about-list span {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
 .light {
   background-color: var(--dark-txt-clr);
   color: var(--light-txt-clr);
@@ -83,6 +98,14 @@ body {
   background-color: var(--dark-bg-clr);
 }
 
+.light-clr {
+  color: var(--light-txt-clr);
+}
+
+.dark-clr {
+  color: var(--dark-txt-clr);
+}
+
 h1, h2, h3, h4, span, ul, p, a {
   margin-top: 0;
 }
@@ -99,10 +122,31 @@ h1 {
   }
 }
 
+h2 {
+  font-weight: 800;
+  font-size: 1.375rem;
+  line-height: 1.875rem;
+  margin-bottom: 1rem;
+}
+@media (min-width: 43.75em) {
+  h2 {
+    font-size: 2rem;
+    line-height: 2.6875rem;
+    margin-bottom: 1.4375rem;
+  }
+}
+
 h3 {
   margin-bottom: 1rem;
   font-size: 1.125rem;
   line-height: 1.625rem;
+}
+
+h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  text-transform: capitalize;
 }
 
 .btn-txt {

@@ -1,14 +1,15 @@
 @use '../../scss/util' as u;
 
-.country {
-
+.countryInfo {
+    padding-bottom: 4em;
+    
     &__info {
         margin-top: u.toRem(64);
         display: flex;
         flex-direction: column;
         gap: u.toRem(44);
 
-        @include u.breakpoint('medium'){
+        @include u.breakpoint('large') {
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
@@ -18,23 +19,85 @@
         &__flag {
             display: block;
             width: 100%;
+            max-width: u.toRem(400);
+            margin: 0 auto;
+            object-fit: cover;
             border-radius: 5px;
 
-            @include u.breakpoint('medium'){
+            @include u.breakpoint('medium') {
+                max-width: u.toRem(560);
                 width: 45%;
             }
         }
 
         &__about {
 
-            @include u.breakpoint('medium'){
+            @include u.breakpoint('large') {
                 width: 45%;
             }
 
-            &__specs{
+            &__specs {
                 display: flex;
                 flex-direction: column;
-                gap: u.toRem(32)
+                gap: u.toRem(32);
+                margin-bottom: u.toRem(32);
+
+                @include u.breakpoint('medium'){
+                    flex-direction: row;
+                    justify-content: space-between;
+                    gap: 0;
+                    margin-bottom: u.toRem(68);
+                }
+
+                ul {
+                    font-size: u.toRem(16);
+                    line-height: u.toRem(32);
+                    font-weight: 300;
+
+                    @include u.breakpoint('medium'){
+                        width: 45%;
+                    }
+
+
+                    li {
+                        opacity: .8;
+                    }
+
+                    .title {
+                        font-weight: 400;
+                        font-size: u.toRem(16);
+                    }
+                }
+            }
+
+            .borders {
+                display: flex;
+                flex-direction: column;
+
+                @include u.breakpoint('medium'){
+                    flex-direction: row;
+                }
+
+                h4 {
+                    width: u.toRem(150);
+                    margin-bottom: u.toRem(16);
+
+                    @include u.breakpoint('large'){
+                        margin-bottom: 0;
+                    }
+                }
+
+                &-container {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-template-rows: auto;
+                    place-items: center;
+                    gap: 10px;
+
+                    @include u.breakpoint('large'){
+                        width: auto;
+                    }
+                }
             }
         }
     }

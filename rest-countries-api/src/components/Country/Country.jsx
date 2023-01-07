@@ -9,8 +9,8 @@ export default function Country({theme, place}) {
         <Link to={`/${cca3}`} className={`country ${theme}`}>
             <img className='flag' src={flags.png} alt='' aria-hidden='true'/>
             <div className='country__info'>
-                <h3 className='extra-bold'>{name.official !== undefined ? name.official : name}</h3>
-                <ul>
+                <h3 className='extra-bold'>{name.common !== undefined ? name.common : name}</h3>
+                <ul className='cleaned-about-list'>
                     <li><span>population:</span> {population.toLocaleString("en-US")}</li>
                     <li><span>region:</span> {region}</li>
                     <li><span>capital:</span> {capital}</li>

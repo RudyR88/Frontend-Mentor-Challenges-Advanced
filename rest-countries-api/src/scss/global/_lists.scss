@@ -1,0 +1,19 @@
+@use '../util' as u;
+
+.cleaned-about-list {
+    padding: 0;
+    list-style: none;
+    
+    li {
+        margin-bottom: u.toRem(8);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    span {
+        font-weight: 600;
+        text-transform: capitalize;
+    }
+}
