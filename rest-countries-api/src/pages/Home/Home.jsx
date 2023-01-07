@@ -9,7 +9,8 @@ export default function Home({theme}) {
     const baseUrl = 'https://restcountries.com/v3.1'
     const [countries, setCountries] = useState([]);
     const [search, setSearch] = useState('');
-    let apiUrl = baseUrl+'/all';
+    let countryComps = null;
+    const isCountry = countries.length >= 1;
 
     const getCountries = url => {
         fetch(url)
@@ -18,27 +19,27 @@ export default function Home({theme}) {
     }
 
     const selectRegion = selected => {
-        getCountries(`${baseUrl}/region/${selected}`)
+        getCountries(`${baseUrl}/region/${selected}`);
     }
 
     const searchLocation = location => {
-        if(location !== ''){
-            getCountries(`https://restcountries.com/v2/name/${location}`)
-            document.querySelector('.filter').selectedIndex = 0;
-        }
         setSearch(location);
+        document.querySelector('.filter').selectedIndex = 0;
     }
 
     useEffect(()=>{
-
+        
         if(search === ''){
+            const apiUrl = baseUrl+'/all';
             getCountries(apiUrl)
         }
 
-    },[search])
+        if(search !== ''){
+            getCountries(`${baseUrl}/name/${search}`);
+        }
+        
 
-    const isCountry = countries.length >= 1;
-    let countryComps = null;
+    },[search]);
 
     if(isCountry){
         countryComps = countries.map(place => <Country key={nanoid()} theme={theme} place={place}/>)
@@ -51,7 +52,7 @@ export default function Home({theme}) {
                 <Filter theme={theme} selectRegion={selectRegion} search={search}/>
             </div>
             <div className='countries-container'>
-                { isCountry ? countryComps : <h2 className={theme}>No countries matching "{search}"</h2>}
+                { isCountry ? countryComps : <h2 className={theme}>{search === '' ? 'Loading...' : `No countries matching "${search}"`}</h2>}
             </div>
         </main>
     )

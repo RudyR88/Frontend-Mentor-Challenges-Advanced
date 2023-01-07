@@ -1,10 +1,12 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import './Country.css';
 
 export default function Country({theme, place}) {
-    const {flags, name, population, region, capital} = place;
+    const {flags, name, population, region, capital, cca3} = place;
+    
     return (
-        <a href='#' className={`country ${theme}`}>
+        <Link to={`/${cca3}`} className={`country ${theme}`}>
             <img className='flag' src={flags.png} alt='' aria-hidden='true'/>
             <div className='country__info'>
                 <h3 className='extra-bold'>{name.official !== undefined ? name.official : name}</h3>
@@ -14,6 +16,6 @@ export default function Country({theme, place}) {
                     <li><span>capital:</span> {capital}</li>
                 </ul>
             </div>
-        </a>
+        </Link>
     )
 }

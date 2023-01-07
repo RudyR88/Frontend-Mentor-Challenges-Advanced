@@ -1,0 +1,34 @@
+.country__info {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.75rem;
+}
+@media (min-width: 43.75em) {
+  .country__info {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+  }
+}
+.country__info__flag {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+}
+@media (min-width: 43.75em) {
+  .country__info__flag {
+    width: 45%;
+  }
+}
+@media (min-width: 43.75em) {
+  .country__info__about {
+    width: 45%;
+  }
+}
+.country__info__about__specs {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}/*# sourceMappingURL=CountryInfo.css.map */

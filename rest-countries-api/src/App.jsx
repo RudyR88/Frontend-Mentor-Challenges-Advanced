@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import { ThemeContext } from './context/themeContext';
 import Home from './pages/Home/Home';
+import CountryInfo from './pages/CountryInfo/CountryInfo';
 import './scss/style.css';
 
 export default function App() {
@@ -13,6 +14,7 @@ export default function App() {
         <Navbar />
         <Routes>
           <Route exact path = '/' element={<Home theme={theme}/>}/>
+          <Route path = '/:abbrev' element={<CountryInfo theme={theme}/>}/>
         </Routes>
       </Router>
     </div>

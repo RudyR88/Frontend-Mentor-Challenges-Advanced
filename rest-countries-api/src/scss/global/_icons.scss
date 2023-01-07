@@ -9,3 +9,13 @@
         margin-right: u.toRem(10.5);
     }
 }
+
+.back-arrow {
+    font-size: u.toRem(18);
+    margin-right: u.toRem(8);
+
+    @include u.breakpoint('medium'){
+        font-size: u.toRem(20);
+        margin-right: u.toRem(10);
+    }
+}

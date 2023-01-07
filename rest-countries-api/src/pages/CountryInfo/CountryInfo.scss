@@ -1,0 +1,41 @@
+@use '../../scss/util' as u;
+
+.country {
+
+    &__info {
+        margin-top: u.toRem(64);
+        display: flex;
+        flex-direction: column;
+        gap: u.toRem(44);
+
+        @include u.breakpoint('medium'){
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0;
+        }
+
+        &__flag {
+            display: block;
+            width: 100%;
+            border-radius: 5px;
+
+            @include u.breakpoint('medium'){
+                width: 45%;
+            }
+        }
+
+        &__about {
+
+            @include u.breakpoint('medium'){
+                width: 45%;
+            }
+
+            &__specs{
+                display: flex;
+                flex-direction: column;
+                gap: u.toRem(32)
+            }
+        }
+    }
+}
