@@ -4,6 +4,7 @@ import Navbar from './components/Navbar/Navbar';
 import { ThemeContext } from './context/themeContext';
 import Home from './pages/Home/Home';
 import CountryInfo from './pages/CountryInfo/CountryInfo';
+import NotFound from './pages/NotFound/NotFound';
 import './scss/style.css';
 
 export default function App() {
@@ -15,6 +16,7 @@ export default function App() {
         <Routes>
           <Route exact path = '/' element={<Home theme={theme}/>}/>
           <Route path = '/:abbrev' element={<CountryInfo theme={theme}/>}/>
+          <Route path = '*' element={<NotFound theme={theme}/>}/>
         </Routes>
       </Router>
     </div>

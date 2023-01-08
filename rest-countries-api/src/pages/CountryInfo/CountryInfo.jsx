@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {nanoid} from 'nanoid';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, redirect } from 'react-router-dom';
 import CountryLinks from '../../components/CountryLinks/CountryLinks';
 import './CountryInfo.css';
 
@@ -19,7 +19,9 @@ export default function CountryInfo({theme}) {
 
     useEffect(() => {
         getCountry()
-        .catch(console.error);;
+        .catch(
+            console.log('triggered')
+        );;
     }, [abbrev])
 
     if(info){
