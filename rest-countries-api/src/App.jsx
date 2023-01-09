@@ -15,7 +15,7 @@ export default function App() {
         <Navbar />
         <Routes>
           <Route exact path = '/' element={<Home theme={theme}/>}/>
-          <Route path = '/:abbrev' element={<CountryInfo theme={theme}/>}/>
+          <Route exact path = '/:abbrev' element={<CountryInfo theme={theme}/>}/>
           <Route path = '*' element={<NotFound theme={theme}/>}/>
         </Routes>
       </Router>

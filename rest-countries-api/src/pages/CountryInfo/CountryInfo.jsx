@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {nanoid} from 'nanoid';
-import { useParams, useNavigate, redirect } from 'react-router-dom';
+import { useParams, useNavigate} from 'react-router-dom';
 import CountryLinks from '../../components/CountryLinks/CountryLinks';
 import './CountryInfo.css';
 
@@ -14,14 +14,14 @@ export default function CountryInfo({theme}) {
     const getCountry = async () => {
         const res = await fetch(apiUrl);
         const data = await res.json();
+        if(res.status === 400){
+            navigate('/');
+        }
         setInfo(data[0]);
     }
 
     useEffect(() => {
         getCountry()
-        .catch(
-            console.log('triggered')
-        );;
     }, [abbrev])
 
     if(info){
@@ -31,6 +31,8 @@ export default function CountryInfo({theme}) {
             borderCountries = borders.map(item => <CountryLinks key={nanoid()} link={item} theme={theme}/>);
         }
     }
+
+
 
     return (
         <main className='container countryInfo'>

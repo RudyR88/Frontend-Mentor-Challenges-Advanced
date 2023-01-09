@@ -12,10 +12,10 @@ export default function Home({theme}) {
     let countryComps = null;
     const isCountry = countries.length >= 1;
 
-    const getCountries = url => {
-        fetch(url)
-        .then(res => res.json())
-        .then(data => setCountries(data))
+    const getCountries = async url => {
+        const res = await fetch(url);
+        const data = await res.json();
+        setCountries(data);
     }
 
     const selectRegion = selected => {
