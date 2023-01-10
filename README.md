@@ -1,5 +1,5 @@
 # Frontend-Mentor-Challenges-Advanced
-*Solutions to Frontend Mentor newbie challenges https://www.frontendmentor.io/challenges*
+*Solutions to Frontend Mentor advanced challenges https://www.frontendmentor.io/challenges*
 
 **React JS and Sass chosen as additional tools for projects.**
 
