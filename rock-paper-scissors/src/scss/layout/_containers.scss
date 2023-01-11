@@ -1,0 +1,10 @@
+@use '../util' as u;
+
+.container {
+    width: 90%;
+    max-width: u.toEm(375);
+
+    @include u.breakpoint('large'){
+        max-width: u.toEm(1366);
+    }
+}
