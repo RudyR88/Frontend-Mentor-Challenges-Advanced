@@ -5,13 +5,7 @@
     cursor: pointer;
 
     &--transparent {
-        color: var(--score-bg);
-        letter-spacing: 2px;
-        padding: u.toRem(8) u.toRem(32);
-        text-transform: uppercase;
-        border: solid 2px var(--header-otl);
-        border-radius: 8px;
-        font-size: u.toRem(18);
         background: transparent;
+        border: none;
     }
 }

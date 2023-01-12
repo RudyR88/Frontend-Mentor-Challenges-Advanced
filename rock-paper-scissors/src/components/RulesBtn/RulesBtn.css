@@ -1,11 +1,18 @@
-.rules {
+.rules-btn {
+  color: var(--score-bg);
+  letter-spacing: 2px;
+  padding: 0.5rem 2rem;
+  text-transform: uppercase;
+  border: solid 2px var(--header-otl);
+  border-radius: 8px;
+  font-size: 1.125rem;
   bottom: 3.75rem;
   position: absolute;
   left: 50%;
   transform: translate(-50%);
 }
 @media (min-width: 62.5em) {
-  .rules {
+  .rules-btn {
     transform: none;
     left: unset;
     right: 1.5625rem;

@@ -1,0 +1,65 @@
+@use '../../scss//util' as u;
+
+.rules-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--score-bg);
+    z-index: 100;
+
+    @include u.breakpoint('medium'){
+        background-color: var(--dark-grd);
+    }
+
+    .rules {
+        height: 100%;
+        padding: u.toRem(16);
+        border-radius: 8px;
+        background-color: var(--score-bg);
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        justify-items: center;
+        align-items: center;
+
+        @include u.breakpoint('medium'){
+            height: u.toRem(400);
+            width: u.toRem(350);
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-areas: 
+            'logo . close'
+            'rul rul rul';
+        }
+    
+        h2 {
+            text-transform: uppercase;
+            color: var(--dark-txt);
+            grid-area: 'logo';
+        }
+
+        .rules-img {
+            display: block;
+            width: 100%;
+            max-width: u.toRem(318);
+
+            @include u.breakpoint('medium'){
+                max-width: u.toRem(418);
+                grid-area: 'rul';
+            }
+        }
+
+        &__close {
+            font-size: u.toRem(22);
+            color: var(--dark-txt);
+            opacity: .3;
+            grid-area: 'close';
+        }
+    }
+}

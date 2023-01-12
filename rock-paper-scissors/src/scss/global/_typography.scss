@@ -23,3 +23,12 @@ h1 {
         font-size: u.toRem(50);
     }
 }
+
+h2 {
+    font-weight: 700;
+    font-size: u.toRem(34);
+
+    @include u.breakpoint('medium'){
+        font-size: u.toRem(40);
+    }
+}

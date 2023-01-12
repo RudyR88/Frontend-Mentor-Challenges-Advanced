@@ -1,0 +1,60 @@
+.rules-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--score-bg);
+  z-index: 100;
+}
+@media (min-width: 43.75em) {
+  .rules-bg {
+    background-color: var(--dark-grd);
+  }
+}
+.rules-bg .rules {
+  height: 100%;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: var(--score-bg);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  justify-items: center;
+  align-items: center;
+}
+@media (min-width: 43.75em) {
+  .rules-bg .rules {
+    height: 25rem;
+    width: 21.875rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "logo . close" "rul rul rul";
+  }
+}
+.rules-bg .rules h2 {
+  text-transform: uppercase;
+  color: var(--dark-txt);
+  grid-area: "logo";
+}
+.rules-bg .rules .rules-img {
+  display: block;
+  width: 100%;
+  max-width: 19.875rem;
+}
+@media (min-width: 43.75em) {
+  .rules-bg .rules .rules-img {
+    max-width: 26.125rem;
+    grid-area: "rul";
+  }
+}
+.rules-bg .rules__close {
+  font-size: 1.375rem;
+  color: var(--dark-txt);
+  opacity: 0.3;
+  grid-area: "close";
+}/*# sourceMappingURL=Rules.css.map */
