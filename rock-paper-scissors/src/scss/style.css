@@ -12,20 +12,31 @@ html {
 body {
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
   background: var(--bg);
+  font-family: var(--primary-txt);
+  font-weight: 600;
 }
 
 h1, h2, h3, h4, span, p, a {
   margin-top: 0;
 }
 
+.overline {
+  text-transform: uppercase;
+  font-size: 0.625rem;
+  color: var(--score-txt);
+  letter-spacing: 2px;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
 :root {
   --primary-txt: "Barlow Semi Condensed", sans-serif;
   --bg: linear-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  --score-bg: hsl(100, 100%, 100%);
   --dark-txt: hsl(229, 25%, 31%);
   --score-txt: hsl(229, 64%, 46%);
   --header-otl: hsl(217, 16%, 45%);
@@ -37,11 +48,15 @@ h1, h2, h3, h4, span, p, a {
 }
 
 .container {
-  width: 90%;
-  max-width: 23.4375em;
+  width: 85%;
+  margin: 0 auto;
 }
 @media (min-width: 85.375em) {
   .container {
     max-width: 85.375em;
   }
+}
+
+.app {
+  padding-top: 2rem;
 }/*# sourceMappingURL=style.css.map */

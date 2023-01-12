@@ -1,0 +1,26 @@
+.scoreboard {
+  padding: 0.75rem;
+  border: solid 3px var(--header-otl);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.scoreboard img {
+  width: 4.0625em;
+  padding-left: 0.5rem;
+  display: block;
+}
+.scoreboard .score-container {
+  text-align: center;
+  border-radius: 5px;
+  background-color: var(--score-bg);
+  padding: 0.625rem 1.5rem;
+}
+.scoreboard .score-container span {
+  display: block;
+}
+.scoreboard .score-container h1 {
+  margin-bottom: 0;
+  color: var(--dark-txt);
+}/*# sourceMappingURL=ScoreBoard.css.map */

@@ -1,0 +1,33 @@
+@use '../../scss/util' as u;
+
+.scoreboard {
+    padding: u.toRem(12);
+    border: solid 3px var(--header-otl);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+        width: u.toEm(65);
+        padding-left: u.toRem(8);
+        display: block;
+    }
+
+    .score-container {
+        text-align: center;
+        border-radius: 5px;
+        background-color: var(--score-bg);
+        padding: u.toRem(10) u.toRem(24);
+
+        span {
+            display: block;
+        }
+    
+        h1 {
+            margin-bottom: 0;
+            color: var(--dark-txt);
+        }
+    }
+
+}
