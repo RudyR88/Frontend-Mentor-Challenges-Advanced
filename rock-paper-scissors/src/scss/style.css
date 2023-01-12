@@ -18,6 +18,21 @@ body {
   font-weight: 600;
 }
 
+.btn {
+  font-family: inherit;
+  cursor: pointer;
+}
+.btn--transparent {
+  color: var(--score-bg);
+  letter-spacing: 2px;
+  padding: 0.5rem 2rem;
+  text-transform: uppercase;
+  border: solid 2px var(--header-otl);
+  border-radius: 8px;
+  font-size: 1.125rem;
+  background: transparent;
+}
+
 h1, h2, h3, h4, span, p, a {
   margin-top: 0;
 }
@@ -28,9 +43,20 @@ h1, h2, h3, h4, span, p, a {
   color: var(--score-txt);
   letter-spacing: 2px;
 }
+@media (min-width: 43.75em) {
+  .overline {
+    font-size: 0.8125rem;
+  }
+}
 
 h1 {
+  font-weight: 700;
   font-size: 2.5rem;
+}
+@media (min-width: 43.75em) {
+  h1 {
+    font-size: 3.125rem;
+  }
 }
 
 :root {
@@ -51,12 +77,13 @@ h1 {
   width: 85%;
   margin: 0 auto;
 }
-@media (min-width: 85.375em) {
+@media (min-width: 62.5em) {
   .container {
     max-width: 85.375em;
   }
 }
 
 .app {
-  padding-top: 2rem;
+  padding-top: 32px;
+  height: 100vh;
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,11 @@
+.playfield {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+}
+.playfield img {
+  width: 20.3125rem;
+  z-index: -1;
+}/*# sourceMappingURL=Playfield.css.map */

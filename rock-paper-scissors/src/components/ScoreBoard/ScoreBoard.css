@@ -1,21 +1,39 @@
 .scoreboard {
   padding: 0.75rem;
+  margin-bottom: 2rem;
   border: solid 3px var(--header-otl);
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+@media (min-width: 43.75em) {
+  .scoreboard {
+    padding: 0.875rem;
+    max-width: 37.5em;
+    margin: 0 auto;
+  }
+}
 .scoreboard img {
   width: 4.0625em;
   padding-left: 0.5rem;
   display: block;
+}
+@media (min-width: 43.75em) {
+  .scoreboard img {
+    width: 6.25em;
+  }
 }
 .scoreboard .score-container {
   text-align: center;
   border-radius: 5px;
   background-color: var(--score-bg);
   padding: 0.625rem 1.5rem;
+}
+@media (min-width: 43.75em) {
+  .scoreboard .score-container {
+    padding: 0.625rem 2.5rem;
+  }
 }
 .scoreboard .score-container span {
   display: block;

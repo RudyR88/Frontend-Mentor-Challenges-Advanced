@@ -1,0 +1,15 @@
+@use '../../scss/util' as u;
+
+.rules {
+    bottom:u.toRem(60);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+
+    @include u.breakpoint('large'){
+        transform: none;
+        left: unset;
+        right: u.toRem(25);
+        bottom:u.toRem(25);
+    }
+}

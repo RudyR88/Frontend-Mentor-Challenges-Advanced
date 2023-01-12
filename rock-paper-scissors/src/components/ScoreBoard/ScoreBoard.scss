@@ -2,16 +2,27 @@
 
 .scoreboard {
     padding: u.toRem(12);
+    margin-bottom: u.toRem(32);
     border: solid 3px var(--header-otl);
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
+    @include u.breakpoint('medium'){
+        padding: u.toRem(14);
+        max-width: u.toEm(600);
+        margin: 0 auto;
+    }
+
     img {
         width: u.toEm(65);
         padding-left: u.toRem(8);
         display: block;
+
+        @include u.breakpoint('medium'){
+            width: u.toEm(100);
+        }
     }
 
     .score-container {
@@ -19,6 +30,10 @@
         border-radius: 5px;
         background-color: var(--score-bg);
         padding: u.toRem(10) u.toRem(24);
+
+        @include u.breakpoint('medium'){
+            padding: u.toRem(10) u.toRem(40);
+        }
 
         span {
             display: block;

@@ -1,0 +1,14 @@
+.rules {
+  bottom: 3.75rem;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+@media (min-width: 62.5em) {
+  .rules {
+    transform: none;
+    left: unset;
+    right: 1.5625rem;
+    bottom: 1.5625rem;
+  }
+}/*# sourceMappingURL=RulesBtn.css.map */
